@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-Scheduler-0265A7B4-B80D-4A55-9AEB-A7730851765F</UserSecretsId>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.21.1" />
+    <PackageReference Include="Grpc.Core" Version="2.46.3" />
+    <PackageReference Include="Grpc.Tools" Version="2.46.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.16.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="appExtX">
+      <HintPath>libraries\appExtX.dll</HintPath>
+    </Reference>
+    <Reference Include="dBExt_x">
+      <HintPath>libraries\dBExt_x.dll</HintPath>
+    </Reference>
+    <Reference Include="dncCore">
+      <HintPath>libraries\dncCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Scheduler_Grpc_Listener">
+      <HintPath>libraries\Scheduler_Grpc_Listener.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /Y &quot;$(TargetDir)$(ProjectName).dll&quot; &quot;C:\Project\dotNet\Core\libraries\x3.1\$(ProjectName).dll&quot;" />
+  </Target>
+</Project>

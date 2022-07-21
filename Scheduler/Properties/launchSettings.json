@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Scheduler": {
+      "commandName": "Project",
+      "commandLineArgs": "-config_file=.//Scheduler.config",
+      "workingDirectory": "C:\\Project\\Scheduler\\Scheduler\\debugger",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Project\\Scheduler\\Scheduler\\Scheduler.csproj": {}
+  },
+  "projects": {
+    "C:\\Project\\Scheduler\\Scheduler\\Scheduler.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Project\\Scheduler\\Scheduler\\Scheduler.csproj",
+        "projectName": "Scheduler",
+        "projectPath": "C:\\Project\\Scheduler\\Scheduler\\Scheduler.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\Scheduler\\Scheduler\\obj\\publish\\win-x64\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.21.1, )"
+            },
+            "Grpc.Core": {
+              "target": "Package",
+              "version": "[2.46.3, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.46.3, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.Extensions.Hosting.WindowsServices": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.16.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
