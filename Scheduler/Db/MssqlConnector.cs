@@ -18,13 +18,14 @@ namespace Scheduler
     public class MssqlConnector : Connector 
                                 , IDisposable
     {
-        private bool disposedValue;
 
-        public MssqlConnector(ConnectParam connectparam)
-            : base(connectparam)
+        public MssqlConnector(string connstr)
+            :base(connstr)
         {
 
         }
+
+        private bool disposedValue;
 
         protected virtual void Dispose(bool disposing)
         {
@@ -62,11 +63,10 @@ namespace Scheduler
 
 
         static dBExt_x.MSSQL.Connector mssql;
-        static ConnectParam _connectparam;
-        public static void Connect(ConnectParam connectparam)
+
+        public static void Connect(string connectparam)
         {
             appExtX.Log.Info($"MssqlConnector::Connect()");
-            _connectparam = connectparam;
 
             mssql = new Connector(connectparam);
 
@@ -79,7 +79,7 @@ namespace Scheduler
                 appExtX.Log.Exception($"connecting to sql Server; ${ex.Message}");
             }
         }
-        
+
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static string FreshFile( string freshfielpath_N_name)
         {

@@ -16,6 +16,24 @@ namespace Scheduler
 
         }
 
+        /*
+
+        public override async Task StartAsync(CancellationToken cancellationToken)
+        {
+            await base.StartAsync(cancellationToken);
+        }
+
+        public override async Task StopAsync(CancellationToken cancellationToken)
+        {
+            await base.StopAsync(cancellationToken);
+        }
+
+        public override void Dispose()
+        {
+            base.Dispose();
+
+        }
+        */
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
               Helper.App_PostInit();

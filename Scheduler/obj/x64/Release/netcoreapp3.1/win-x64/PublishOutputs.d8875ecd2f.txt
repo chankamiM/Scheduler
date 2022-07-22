@@ -1,0 +1,6 @@
+C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\publish\debugger\Scheduler.config
+C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\publish\Scheduler.config
+C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\publish\appsettings.Development.json
+C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\publish\appsettings.json
+C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\publish\Scheduler.pdb
+C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\publish\Scheduler.exe

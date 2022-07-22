@@ -38,18 +38,9 @@ namespace Scheduler
 
             appExtX.ModuleHelper.postInit();
 
-            ConnectParam connectparam = new ConnectParam();
-
-            connectparam.serverAddr = dncCore.Params.HardGet(Define.KeysEnum.DB_serverAddr.ToString());
-            connectparam.Database   = dncCore.Params.HardGet(Define.KeysEnum.DB_Name.ToString());
-            connectparam.user       = dncCore.Params.HardGet(Define.KeysEnum.DB_User.ToString());
-            connectparam.pw         = dncCore.Params.HardGet(Define.KeysEnum.DB_Pw.ToString());
-
-            var _1 = dncCore.Params.HardGet(Define.KeysEnum.DB_TrustServerCertificate.ToString());
-            connectparam.TrustServerCertificate = appExtX.Template.ConvertTo(_1);
-            connectparam.Trust_Connection       = appExtX.Template.ConvertTo(dncCore.Params.HardGet(Define.KeysEnum.DB_Trust_Connection.ToString()));
-
-            Scheduler.MssqlConnector.Connect(connectparam);
+            
+            //Scheduler.MssqlConnector.Connect(connectparam);
+            Scheduler.MssqlConnector.Connect(dncCore.Params.HardGet(Define.KeysEnum.DB_Conn.ToString()));
 
             Scheduler_2_Dispatcher_Bridge.ComServices.Grpc.SchedulerServer.Start();
 

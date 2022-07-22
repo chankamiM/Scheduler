@@ -45,22 +45,12 @@ namespace Scheduler
 
         public enum KeysEnum
         {
-             DB_serverAddr
-           , DB_Name
-           , DB_User
-           , DB_Pw
-           , DB_Trust_Connection
-           , DB_TrustServerCertificate
+           DB_Conn
         }
 
         public static Dictionary<string, string> dict = new Dictionary<string, string>()
         { 
-             {KeysEnum.DB_serverAddr.ToString(),"192.168.2.11,1433"}
-            ,{KeysEnum.DB_Name.ToString(),"simpleDB"}
-            ,{KeysEnum.DB_User.ToString(),"simpleuser"}
-            ,{KeysEnum.DB_Pw.ToString(),"simplepassword"}
-            ,{KeysEnum.DB_Trust_Connection.ToString(),"0"}
-            ,{KeysEnum.DB_TrustServerCertificate.ToString(),"0"}
+            {KeysEnum.DB_Conn.ToString(),"Data Source=192.168.2.11,1433;Initial Catalog=L3;User ID=structo;Password=structo123;Integrated Security=SSPI;Trusted_Connection=true;TrustServerCertificate=false;"}
         };
 
         public static void SetDefault()

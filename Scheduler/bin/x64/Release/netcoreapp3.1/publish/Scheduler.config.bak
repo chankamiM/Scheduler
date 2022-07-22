@@ -1,0 +1,31 @@
+GRPC_HOST=192.168.2.140:50051
+WEB_HOST=http://192.168.30.190:8000
+SFTP_HOST=192.168.30.190
+SFTP_USER=lineouser
+SFTP_PASS=structo123
+FETCH_TAG_INFO_POLLING_RATE=123
+FETCH_TIMEOUT_DURATION=123
+KEPWARE_HOST=http://192.168.30.160:39320/iotgateway
+tesst
+_123=
+-log_save_location=.//Logs
+-log_file_prefix=scheduler_Bridge_ 
+-log_file_extension=log 
+-write_log_cnt=50000
+--ShowLog
+DB_IP=127.0.0.1
+DB_PORT=9123
+SCHEDULER_EP_IP=*
+SCHEDULER_EP_PORT=8122
+Dispatcher_GrpcHost=192.168.1.140:11111
+DB_serverAddr=192.168.2.11,1433
+DB_Name=L3
+DB_User=structo
+DB_Pw=structo123
+DB_Trust_Connection=true
+DB_TrustServerCertificate=true
+DB_Intergrated_Security=False
+SchedulerGrpcIp=192.168.2.11
+DB_Conn1=Data Source=192.168.2.11,1433;Initial Catalog=L3;User ID=structo;Password=structo123;Integrated Security=SSPI;Trusted_Connection=true;TrustServerCertificate=false;
+DB_Conn=Data Source=192.168.2.11,1433;Initial Catalog=L3;User ID=structo;Password=structo123;TrustServerCertificate=True;Encrypt=False;
+SchedulerGrpcPort=7010

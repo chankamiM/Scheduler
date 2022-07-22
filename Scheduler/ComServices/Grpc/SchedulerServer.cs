@@ -24,20 +24,30 @@ namespace Scheduler_2_Dispatcher_Bridge.ComServices.Grpc
         public static void Start()
         {
             appExtX.Log.Info("SchedulerServer::start()");
-            var ip = dncCore.Params.HardGet(Define.SchedulerGrpcIpKey);
-            var port = (int)dncCore.Params.GetAsUint(Define.SchedulerGrpcPortKey
-                                                             , Define.SchedulerGrpcPortValue
-                                                            );
-            Scheduleserver.Files_Svc = new Server()
+
+            try
             {
-                Services = { SchedulerGrpc.Files.BindService(new FilesImpl()) },
-                Ports    = { new ServerPort(ip, port,  ServerCredentials.Insecure)
+                var ip = dncCore.Params.HardGet(Define.SchedulerGrpcIpKey);
+
+                var port = (int)dncCore.Params.GetAsUint(   Define.SchedulerGrpcPortKey
+                                                          , Define.SchedulerGrpcPortValue
+                                                        );
+                
+                Scheduleserver.Files_Svc = new Server()
+                {
+                    Services = { SchedulerGrpc.Files.BindService(new FilesImpl()) },
+                    Ports = { new ServerPort(ip, port,  ServerCredentials.Insecure)
                           }
-            };
+                };
 
-            Scheduleserver.Files_Svc.Services.Add(SchedulerGrpc.SvcSlicerProfile.BindService(new SvcSlicerProfileImpl()));
+                Scheduleserver.Files_Svc.Services.Add(SchedulerGrpc.SvcSlicerProfile.BindService(new SvcSlicerProfileImpl()));
 
-            Scheduleserver.Files_Svc.Start();
+                Scheduleserver.Files_Svc.Start();
+            }
+            catch(Exception ex)
+            {
+                appExtX.Log.Exception($"Start grpc Server {ex.Message}");
+            }
         }
     }
 }
