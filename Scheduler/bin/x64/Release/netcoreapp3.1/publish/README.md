@@ -1,6 +1,7 @@
 # Scheduler Setup
 
 Step by step guide to setup Scheduler.
+
 > *This application can be only run on windows 10 *
 
 ### Prerequisite
