@@ -1,46 +1,28 @@
-Version 1.00 25th July 2022
+# Scheduler Setup
 
-This README file describes the Scheduler setup. 
+Step by step guide to setup Scheduler.
+> *This application can be only run on windows 10 *
 
-Assuume the Scheduler folder is in C drive and renamed to 'XXX_Folder', 
+### Prerequisite
+1. Install Microsoft SQL serve
+2. Run the DB script as per the sequence
 
-C:\xxxx_Folder\ 
-              \setup.bat
-              \setup.ps1
-              \Scheduler.exe
-              \Scheduler.config
-              
-Scheduler.exe is a designated C# Windows service program, using dotCore 3.1 framework. 
+### Steps
 
-Go to https://dotnet.microsoft.com/en-us/download/dotnet/3.1 to download and install dotCore 3.1 framework foremost.
-	
-'setup.ps1' is a powershell script. The script must be run in administrative mode.
-	
-'setup.ps1' IS TO RUN ONCE! It looks into current directory where Scheduler.exe resides, and create a 'Logs' folder and
-update 'Scheduler.config' file where the Logs folder is located at.
+1. Create a new folder and copy below files to created folder 
+<pre>
+C:\Scheduler
+              setup.bat
+              setup.ps1
+              Scheduler.exe
+			  Scheduler.config </pre>
+2. Update DB connection string in the **Scheduler.config** file with relevant detials     <pre>DB_Conn=Data Source=localhost,1433;Initial Catalog=L3;User ID=structo;Password=structo123;TrustServerCertificate=True;Encrypt=False;</pre>
+3. Open Command line (CMD) as administrator  run the below command.
+        cd C:\Scheduler
+        	.\setup.bat 
+> This will create a  Window Service named **Scheduler** and **Log** folder.
 
-Next it creates a Window Service named Scheduler and point to  Scheduler.exe with a argument refers to the config file. 
-
-Finally, the script will start the service.
-
-Alternatively, setup.bat works the same as setup.ps1. It also needs to RUN ONCE as explained and need to run in administrative mode as well.
-
-In order for any changes in the config file to take effect, the Scheduler Window Service MUST STOP first.
-After config file edit is done, start the Scheduler Window Service. 
-
-For example if the user decides to relocate the Logs folder, inside the config file, look for the key <-log_save_location>.
-And if the new Logs folder is at 'C:\Foos\Logs' then the key line will look like <-log_save_location=C:\Logs>. 
-
-If the Logs folder is not found(non-existent), then the log files will be logged and saved in C:\Windows\System32\
-
-If there is a upgrade upon the Scheduler.exe, first stop the service, copy and paste over the Scheduler.exe, then start the service once more. 
-
-Once the Scheduler folder is re-assigned, after the copy and paste, run setup once more.
-
-It is possible to create more than 1 Scheduler services(All different service names) and refer to the same Scheduler.exe. 
-
-IT IS RECOMMENDED NOT TO DO SO! An alternative solution is to duplicate Scheduler folder and run the setup in it. There is no
-gurantee the process will be effective with by running Scheduler.exe in multiple process.
-
-Scheduler.exe is ALSO configure to be a GRPC server! Therefore every distinct Scheduler services must have a valid IP/Port setting
-found in the config file. 
+#### Verification
+1. Open windows services and check for **Scheduler** service created, and the status should be  **Running**
+2. Check for the** Logs** folder inside the setup folder (eg: C:\Scheduler)
+3. Check if there any connection related errors inside the latest log file insidein the  Logs folder;

@@ -12,4 +12,4 @@ ECHO.>>"%cd%\Scheduler.config"
 
 sc CREATE Scheduler "binpath=%cd%\Scheduler.exe -config_file=%cd%\Scheduler.config"
 
-sc START Scheduler
+sc start Scheduler
