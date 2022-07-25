@@ -31,10 +31,17 @@ namespace Scheduler
         public static string DispatcherGrpcHost = "192.168.1.1:5001";
         public static readonly string DispatcherGrpcHost_KEY = "Dispatcher_GrpcHost";
 
+        /*
         public static string []KEYS = new string[]
         {
-            "-BatchFilesCheckTimeout"
+            "DB_serverAddr",
+            "DB_Name",
+            "DB_User",
+            "DB_Pw",
+            "DB_Trust_Connection",
+            "DB_TrustServerCertificate"
         };
+        */
 
         public enum KeysEnum
         {

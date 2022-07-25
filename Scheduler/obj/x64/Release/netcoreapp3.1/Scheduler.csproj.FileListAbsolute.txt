@@ -127,5 +127,3 @@ C:\Project\Scheduler\Scheduler\obj\x64\Release\netcoreapp3.1\Scheduler.csproj.Co
 C:\Project\Scheduler\Scheduler\obj\x64\Release\netcoreapp3.1\Scheduler.dll
 C:\Project\Scheduler\Scheduler\obj\x64\Release\netcoreapp3.1\Scheduler.pdb
 C:\Project\Scheduler\Scheduler\obj\x64\Release\netcoreapp3.1\Scheduler.genruntimeconfig.cache
-C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\setup.bat
-C:\Project\Scheduler\Scheduler\obj\x64\Release\netcoreapp3.1\Scheduler.csproj.AssemblyReference.cache
