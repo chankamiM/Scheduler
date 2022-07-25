@@ -94,5 +94,5 @@ C:\Project\Scheduler\Scheduler\obj\x64\Release\netcoreapp3.1\win-x64\Scheduler.d
 C:\Project\Scheduler\Scheduler\obj\x64\Release\netcoreapp3.1\win-x64\Scheduler.pdb
 C:\Project\Scheduler\Scheduler\obj\x64\Release\netcoreapp3.1\win-x64\Scheduler.genruntimeconfig.cache
 C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\win-x64\debugger\Scheduler.config
-C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\win-x64\Scheduler.config
 C:\Project\Scheduler\Scheduler\obj\x64\Release\netcoreapp3.1\win-x64\Scheduler.csproj.AssemblyReference.cache
+C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\win-x64\setup.bat

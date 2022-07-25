@@ -1,5 +1,0 @@
-Creating log file @ .//Logs//scheduler_Bridge_ _2022721_174033_0904__.log 
- 2022721 174033_1066 | INFO | where am i??? C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\publish
- 2022721 174033_4785 | INFO | MssqlConnector::Connect()
- 2022721 174033_6367 | EXCEPTION | connecting to sql Server; $A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
- 2022721 174033_6473 | INFO | SchedulerServer::start()

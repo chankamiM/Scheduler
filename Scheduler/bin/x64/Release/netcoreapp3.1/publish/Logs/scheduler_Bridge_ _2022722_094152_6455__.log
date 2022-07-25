@@ -1,4 +1,0 @@
-Creating log file @ .//Logs//scheduler_Bridge_ _2022722_094152_6455__.log 
- 2022722 094152_6502 | INFO | where am i??? C:\Project\Scheduler\Scheduler\bin\x64\Release\netcoreapp3.1\publish
- 2022722 094153_0760 | INFO | MssqlConnector::Connect()
- 2022722 094153_3257 | INFO | SchedulerServer::start()
